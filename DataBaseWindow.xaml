@@ -1,0 +1,52 @@
+﻿<Window x:Class="Сontact_Angle_Meter.DataBaseWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Сontact_Angle_Meter"
+        mc:Ignorable="d"
+        Title="База данных краевых углов смачивания" Height="500" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <DataGrid x:Name="ContactAngleDBGrid" AutoGenerateColumns="False" Margin="10,0,10,290">
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <!-- Выровнять содержимое столбцов по центру -->
+                <DataGridTextColumn Header="Жидкость" Binding="{Binding Liquid}" Width="*" >
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Материал" Binding="{Binding Material}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Header="Угол, °" Binding="{Binding Angle}" Width="*">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <ComboBox x:Name="cbLiquids" HorizontalAlignment="Left" Margin="10,215,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="cbMaterials" HorizontalAlignment="Left" Margin="10,262,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnShowAngle" Click="btnShowAngle_Click" Content="Показать угол" HorizontalAlignment="Center" Margin="0,319,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="LiquidSelectText" HorizontalAlignment="Left" Margin="10,194,0,0" TextWrapping="Wrap" Text="Выберите жидкость:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="MaterialSelectText" HorizontalAlignment="Left" Margin="10,242,0,0" TextWrapping="Wrap" Text="Выберите материал поверхности смачивания:" VerticalAlignment="Top"/>
+        <Button x:Name="btnDeleteFromDB" Content="Удалить запись" Click="btnDelete_Click" HorizontalAlignment="Center" Margin="0,361,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.103,0.565"/>
+
+    </Grid>
+</Window>

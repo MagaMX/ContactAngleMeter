@@ -1,0 +1,19 @@
+﻿<Window x:Class="Сontact_Angle_Meter.ImageProcessingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Сontact_Angle_Meter"
+        mc:Ignorable="d"
+        Title="Image Processing" Height="500" Width="800" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Image x:Name="processedImageBox" HorizontalAlignment="Left" Height="175" Margin="247,56,0,0" VerticalAlignment="Top" Width="300"/>
+        <Label x:Name="ContactAngleValueLabel" Content="Значение краевого угла смачивания" HorizontalAlignment="Center" Margin="0,242,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.37,0.44"/>
+        <Button x:Name="btnWriteToDB" Content="Записать" HorizontalAlignment="Center" Margin="0,353,0,0" VerticalAlignment="Top" Click="btnWriteToDB_Click"/>
+        <TextBox x:Name="tbLiquidName" HorizontalAlignment="Left" Margin="271,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="tbMaterialName" HorizontalAlignment="Left" Margin="409,323,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="textInsertLiquid" HorizontalAlignment="Left" Margin="271,305,0,0" TextWrapping="Wrap" Text="Введите жидкость:" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textInsertMaterial" HorizontalAlignment="Left" Margin="409,307,0,0" TextWrapping="Wrap" Text="Введите материал:" VerticalAlignment="Top"/>
+        <RadioButton x:Name="rbWriteToDB" Content="Записать измеренное значение в базу данных" HorizontalAlignment="Center" Margin="0,287,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+    </Grid>
+</Window>
