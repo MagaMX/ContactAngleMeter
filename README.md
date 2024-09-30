@@ -1,8 +1,9 @@
 # Сontact Angle Meter
-This is a WPF application that measures and records the contact angle of a liquid on a material surface. The program allows you to select a liquid, a material, and input a measured contact angle. The data is saved in a PostgreSQL database, and the interface supports viewing, adding, and deleting records of contact angles.
+This is a WPF application that measures and records the contact angle of a liquid on a material surface using Emgu.CV. The program allows you to measure contact angle from picture and input it in a database. The data is saved in a PostgreSQL database, and the interface supports viewing, adding, and deleting records of contact angles.
 
 ## Features
 
+- Measure contact angle from a picture using computer vision technology.
 - Select a liquid and material combination from dropdown menus.
 - Input the measured contact angle for the selected combination.
 - Display all recorded contact angles in a `DataGrid`.
@@ -14,6 +15,7 @@ This is a WPF application that measures and records the contact angle of a liqui
 
 - **C# (.NET)**: For application development with WPF.
 - **WPF (Windows Presentation Foundation)**: For building the user interface.
+- **Emgu.CV**: For detecting droplets on the surface and determination of the contact angle
 - **PostgreSQL**: As the relational database to store liquid, material, and angle data.
 - **Npgsql**: .NET data provider for PostgreSQL.
   
@@ -22,6 +24,7 @@ This is a WPF application that measures and records the contact angle of a liqui
 Before running the program, ensure you have the following installed:
 
 - .NET 6 SDK or higher
+- Emgu.CV library
 - PostgreSQL (with an accessible instance)
 - Npgsql library (this can be added via NuGet in Visual Studio)
 
